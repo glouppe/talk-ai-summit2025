@@ -319,18 +319,14 @@ class: middle
 
 ## Conclusions
 
-Score-based generative models...
-- can be used for high-dimensional inverse problems;
-- enable zero-shot posterior sampling, without pre-wiring the network to observations;
-- do not require paired data.
-
-Next challenges:
-- Rigorous diagnostics for the quality of the approximation;
-- Scalability to even larger dimensions (Earth-scale weather models, videos);
+- Diffusion models are more than pretty-pictures generators.
+- They are a new tool for dealing with high-dimensional inverse problems in science.
+- They enable zero-shot posterior sampling, without pre-wiring the network to observations.
 
 ---
 
 class: middle
+count: false
 
 .avatars[![](figures/frozet.jpg)![](figures/gerome.jpg)![](figures/lanusse.jpg)![](figures/gilles.jpg)]
 
