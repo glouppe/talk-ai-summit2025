@@ -249,6 +249,15 @@ Our approach:
 
 class: middle
 
+.center.width-100[![](figures/sda1-0.png)]
+
+.center[Sampling trajectories $x\_{1:L}$ from<br> noisy, incomplete and coarse-grained observations $y$.]
+
+---
+
+class: middle
+count: false
+
 .center.width-100[![](figures/sda1.png)]
 
 .center[Sampling trajectories $x\_{1:L}$ from<br> noisy, incomplete and coarse-grained observations $y$.]
