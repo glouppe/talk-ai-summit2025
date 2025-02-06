@@ -125,7 +125,7 @@ class: middle
 
 The score function $\nabla\_{x\_t} \log p(x\_t)$ is unknown, but can be approximated by a neural network $d\_\theta(x\_t, t)$ by minimizing the denoising score matching objective
 $$\mathbb{E}\_{p(x)p(t)p(x\_t|x)} \left[ || d\_\theta(x\_t, t) - x ||^2\_2 \right].$$
-The optimal denoiser $d\_\theta$ is the mean $\mathbb{E}[x | x\_t]$ which, via Tweedie's formula, allows to use $s\_\theta(x\_t, t) = \Sigma\_t^{-1}(d\_\theta(x\_t, t) - x\_t)$ as a score estimate in the reverse SDE.
+The optimal denoiser $d\_\theta$ is the mean $\mathbb{E}[x | x\_t]$ which, via Tweedie's formula, allows to use $$s\_\theta(x\_t, t) = \Sigma\_t^{-1}(d\_\theta(x\_t, t) - x\_t)$$ as a score estimate of $\nabla\_{x\_t} \log p(x\_t)$ in the reverse SDE.
 
 ---
 
@@ -139,6 +139,20 @@ Using the Bayes' rule, the posterior score $\nabla\_{x\_t} \log p(x\_t|y)$ to in
 $$\nabla\_{x\_t} \log p(x\_t|y) = \nabla\_{x\_t} \log p(x\_t) + \nabla\_{x\_t} \log p(y|x\_t) - \sout{\nabla\_{x\_t} \log p(y)}.$$
 
 This enables .bold[zero-shot posterior sampling] from a diffusion prior $p(x\_0)$ without having to pre-wire the neural denoiser to the observation model $p(y|x)$.
+
+---
+
+class: middle
+
+.center.width-60[![](figures/classifier-guidance.png)]
+
+.center[
+
+Turning a diffusion model trained on ImageNet 512x512 images into a conditional generator using a classifier $p(y|x)$ as observation model.
+
+]
+
+.footnote[Credits: [Dhariwal and Nichol](https://arxiv.org/abs/2105.05233), 2021 (arXiv:2105.05233).]
 
 ---
 
@@ -180,7 +194,7 @@ class: middle
 
 .center[
 
-Posterior source galaxies $x$ can be recovered from gravitional lenses $y$ by<br> zero-shot posterior sampling from a diffusion prior $p(x)$<br> learned from high-quality data.
+Posterior source galaxies $x$ can be recovered from gravitional lenses $y$ by<br> zero-shot posterior sampling from a diffusion prior $p(x)$ of galaxy images.
 
 ]
 
