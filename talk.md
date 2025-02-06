@@ -143,6 +143,7 @@ This enables .bold[zero-shot posterior sampling] from a diffusion prior $p(x\_0)
 ---
 
 class: middle
+exclude: true
 
 .center.width-60[![](figures/classifier-guidance.png)]
 
