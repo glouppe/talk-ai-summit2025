@@ -157,7 +157,6 @@ Turning a diffusion model trained on ImageNet 512x512 images into a conditional 
 ---
 
 class: middle
-exclude: true
 
 .avatars[![](figures/frozet.jpg)![](figures/gerome.jpg)![](figures/lanusse.jpg)![](figures/gilles.jpg)]
 
@@ -177,7 +176,6 @@ $$\nabla\_{x\_t} \mathbb{E}[x | x\_t]^T A^T (\Sigma\_y + A \mathbb{V}[x | x\_t] 
 --
 
 count: false
-exclude: true
 
 .front.width-70.center[![](figures/meme-gaussian.png)]
 
